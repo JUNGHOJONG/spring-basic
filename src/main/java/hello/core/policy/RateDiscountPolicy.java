@@ -5,12 +5,12 @@ import hello.core.member.Member;
 
 public class RateDiscountPolicy implements DiscountPolicy {
 
-    private static final int RateDiscountAmount = 10;
+    private static final int rateDiscountAmount = 10;
 
     @Override
     public int disCount(Member member, int itemPrice) {
         if (member.getGrade() == Grade.VIP) {
-            return itemPrice * RateDiscountAmount / 100;
+            return itemPrice * rateDiscountAmount / 100;
         } else {
             return 0;
         }
