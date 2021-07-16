@@ -28,10 +28,10 @@ public class OrderServiceTest {
 
         //WHEN
         memberService.join(member);
-        Order order = orderService.createOrder(memberId, "itemA", 10000);
+        Order order = orderService.createOrder(memberId, "itemA", 50000);
 
         //THEN
-        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
-        Assertions.assertThat(order.calculatePrice()).isEqualTo(9000);
+        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(5000);
+        Assertions.assertThat(order.calculatePrice()).isEqualTo(45000);
     }
 }
