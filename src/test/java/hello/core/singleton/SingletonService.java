@@ -2,10 +2,12 @@ package hello.core.singleton;
 
 public class SingletonService {
 
-    private static final SingletonService INSTANCE = new SingletonService();
+    private static class SingletonHolder {
+        private static final SingletonService INSTANCE = new SingletonService();
+    }
 
     public static SingletonService getInstance() {
-        return INSTANCE;
+        return SingletonHolder.INSTANCE;
     }
 
     private SingletonService() {}
